@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '../hooks/useAuth';
+const API_URL = import.meta.env.VITE_API_URL;
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -28,7 +29,7 @@ const Dashboard = () => {
   const fetchProfile = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get('/api/mentors/me', {
+      const res = await axios.get(`${API_URL}/api/mentors/me`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setProfile(res.data);
@@ -70,7 +71,7 @@ const Dashboard = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.put('/api/mentors/me', formData, {
+      const res = await axios.put(`${API_URL}/api/mentors/me`, formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setProfile(res.data);

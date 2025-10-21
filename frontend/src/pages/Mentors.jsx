@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import MentorCard from '../components/MentorCard';
-
+const API_URL = import.meta.env.VITE_API_URL;
 const Mentors = () => {
   const [mentors, setMentors] = useState([]);
   const [filteredMentors, setFilteredMentors] = useState([]);
@@ -28,7 +28,7 @@ const Mentors = () => {
 
   const fetchMentors = async () => {
     try {
-      const res = await axios.get('/api/mentors');
+      const res = await axios.get(`${API_URL}/api/mentors`);
       setMentors(res.data);
       setFilteredMentors(res.data);
     } catch (err) {
