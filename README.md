@@ -173,13 +173,6 @@ https://mentorlink-4f2b.onrender.com
 
 https://mentorlink-one-tau.vercel.app/
 
-5. Set environment variable in Vercel dashboard:
-   - Update API base URL in frontend code to point to your Render backend URL
-
-Alternatively, use Vercel's GitHub integration:
-1. Import your project on [Vercel](https://vercel.com)
-2. Set root directory to `frontend`
-3. Deploy
 
 ## Testing the API
 
