@@ -166,37 +166,12 @@ npm run dev:all
 ## Deployment
 
 ### Backend Deployment (Render)
-
-1. Create a new Web Service on [Render](https://render.com)
-2. Connect your GitHub repository
-3. Set build command: `npm install`
-4. Set start command: `node backend/server.js`
-5. Add environment variables:
-   - `MONGODB_URI` - Your MongoDB Atlas connection string
-   - `JWT_SECRET` - A secure random string
-   - `NODE_ENV=production`
+https://mentorlink-4f2b.onrender.com
+ 
 
 ### Frontend Deployment (Vercel)
 
-1. Install Vercel CLI:
-```bash
-npm i -g vercel
-```
-
-2. Navigate to frontend directory:
-```bash
-cd frontend
-```
-
-3. Build the frontend:
-```bash
-npm run build
-```
-
-4. Deploy to Vercel:
-```bash
-vercel --prod
-```
+https://mentorlink-one-tau.vercel.app/
 
 5. Set environment variable in Vercel dashboard:
    - Update API base URL in frontend code to point to your Render backend URL
